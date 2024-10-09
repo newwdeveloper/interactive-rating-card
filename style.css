@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(34, 32, 32);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%; /* Use full width */
+  max-width: 400px; /* Add max-width for larger screens */
+  height: auto;
+  border: 1px solid black;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: rgb(30, 40, 48);
+  color: white;
+  border-radius: 20px;
+}
+
+.container p {
+  margin-bottom: 20px;
+  font-weight: lighter;
+  font-size: 0.9rem;
+  color: #837d7d;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.rating p {
+  width: 50px; /* adjust size */
+  height: 50px; /* equal to width for a perfect circle */
+  border-radius: 50%; /* circle shape */
+  display: flex; /* for centering */
+  justify-content: center; /* horizontal centering */
+  align-items: center; /* vertical centering */
+  background-color: #3f3f3f; /* background color of circle */
+  color: white; /* text color */
+  font-size: 1rem; /* Use relative units */
+  margin: 0; /* remove default paragraph margin */
+  cursor: pointer;
+}
+
+.rating p:hover {
+  transform: scale(1.1);
+  background-color: aliceblue;
+  color: black;
+}
+
+.btn {
+  width: 100%;
+  text-align: center; /* Align text horizontally inside the element */
+  display: flex; /* Make it a flex container */
+  justify-content: center; /* Center items horizontally */
+  align-items: center;
+  height: 3rem;
+  font-size: 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background-color: lightgray; /* Style for disabled button */
+  cursor: not-allowed; /* Change cursor to indicate it's disabled */
+}
+
+.result {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Use full width */
+  max-width: 400px; /* Add max-width for larger screens */
+  height: auto;
+  border: 1px solid black;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: rgb(30, 40, 48);
+  color: white;
+  border-radius: 20px;
+  display: none;
+}
+
+.result h2 {
+  font-weight: lighter;
+  font-size: 1.2rem;
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 15px;
+  color: orange;
+  text-align: center;
+}
+
+.result h1 {
+  font-weight: 300;
+}
+
+.closeBtn {
+  display: flex;
+  position: absolute;
+  top: 10px; /* Adjust this value for vertical positioning */
+  right: 15px; /* Adjust this value for horizontal positioning */
+  font-size: 2rem;
+  width: 50px; /* Size of the button */
+  height: 50px; /* Size of the button */
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 50%; /* Make it circular */
+  justify-content: center;
+  align-items: center; /* Center text vertically */
+  cursor: pointer; /* Show pointer cursor on hover */
+  color: red;
+  background-color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .container,
+  .result {
+    width: 90%; /* Use larger width on smaller screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .container,
+  .result {
+    width: 95%; /* Ensure there's more space on very small screens */
+  }
+}

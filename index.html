@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="icon-star.svg" />
+      <h1 style="font-size: 1.5rem">How did we do??</h1>
+      <p>
+        Please let us know how we did with providing you the support. Your
+        feedback is very valuable and is appreciated to help us to improve our
+        service.
+      </p>
+      <div class="rating">
+        <p class="rating one">1</p>
+        <p class="rating two">2</p>
+        <p class="rating three">3</p>
+        <p class="rating four">4</p>
+        <p class="rating five">5</p>
+      </div>
+      <button class="btn" disabled>SUBMIT</button>
+    </div>
+    <div class="result">
+      <img src="illustration-thank-you.svg" />
+      <h2>You selected <span id="selectedRat">X</span> out of 5 Rating</h2>
+      <h1>THANK YOU</h1>
+      <p>
+        We appriciate your time and efforts to give us feedback rating.We will
+        try our best to implement your suggestions ASAP
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
